@@ -133,3 +133,14 @@ input:invalid{
 	font-size: 32px;
 	color: #fff;
 }
+
+@media only screen and (max-width: 600px){
+
+	body{
+		padding: 0 15px;
+	}
+
+	.show{
+		width: 100%;
+	}
+}
