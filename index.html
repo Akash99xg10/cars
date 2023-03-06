@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>project 6</title>
+	<link rel="icon" type="image/x-icon" href="./images/1.jpg">
+	<meta charset="utf-8">
+	<meta content="width=device-width, initail-scale=1" name="viewport">
+	<link rel="stylesheet" type="text/css" href="./styles.css">
+</head>
+<body>
+<section class="container">
+
+		<div class="card">
+			<div class="img1" onclick="myFunction(this)" style="background-image: url('./images/2.jpg');" data-name=" Nissan GTR" data-price="$38,000"></div>
+		</div>
+	
+		<div class="card">
+		<div class="img2" onclick="myFunction(this)" style="background-image: url('./images/4.jpg');" data-name="Lycan Hyper-X" data-price="$35,000"></div>
+		</div>
+	
+		<div class="card">
+		<div class="img3" onclick="myFunction(this)" style="background-image: url('./images/5.jpg');" data-name="Mercedes AMG" data-price="$29,000"></div>
+		</div>
+	
+		<div class="card">
+		<div class="img4" onclick="myFunction(this)" style="background-image: url('./images/6.jpg');" data-name="Mercedes AMG TOP-G" data-price="$37,500"></div>
+		</div>
+	
+		<div class="card">
+		<div class="img5" onclick="myFunction(this)" style="background-image: url('./images/7.jpg');" data-name="Ford Mustang" data-price="$36,000"></div>
+		</div>
+	
+		<div class="card">
+		<div class="img6" onclick="myFunction(this)" style="background-image: url('./images/8.jpg');" data-name="Nissan GTR 1900" data-price="$42,000"></div>
+		</div>
+</section>
+
+<section class="two" id="two">
+
+	<div class="show" id="main">
+		<span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+		<div class="details" id="details">
+			<p id="name" style="text-align: center;"></p>
+			<p id="price"></p>
+			<button id="view">See more</button>
+			<span onclick="this.parentElement.style.display='none'" class="closebtn2">&times;</span>
+		</div>
+		<ion-icon name="grid-outline" class="car" onclick="myFunction2()" ></ion-icon>
+	</div>
+</section>
+
+
+<script type="text/javascript">
+	
+	function myFunction(imgs){
+		var x = document.getElementById("main");
+		let b = imgs.style.backgroundImage;
+
+		var name = imgs.getAttribute("data-name");
+		var price = imgs.getAttribute("data-price");
+
+		var name1 = document.getElementById("name");
+		var price1 = document.getElementById("price");
+		name1.innerHTML = name;
+		price1.innerHTML = price;
+
+		x.style.backgroundImage = b;
+		x.style.display = "block";
+
+	}
+
+	function myFunction2(){
+		var d = document.getElementById("details");
+		d.style.display = "flex";
+	}
+
+</script>
+
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+</html>
